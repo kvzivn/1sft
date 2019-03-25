@@ -2,6 +2,7 @@
 
 var gulp = require('gulp');
 var sass = require('gulp-sass');
+var babel = require("gulp-babel");
 var browserSync = require('browser-sync').create();
 
 // Static Server + watching scss/html files
@@ -11,11 +12,20 @@ gulp.task('serve', ['sass'], function () {
         server: "./"
     });
 
+    gulp.watch("js/inbox.js", ['js']);
     gulp.watch("scss/*.scss", ['sass']);
     gulp.watch("*.html").on('change', browserSync.reload);
 });
 
-// Compile sass into CSS & auto-inject into browsers
+
+gulp.task('js', function () {
+    return gulp.src("js/inbox.js")
+        .pipe(babel({
+            presets: ['es2015', 'react']
+        }))
+        .pipe(gulp.dest('react'));
+});
+
 gulp.task('sass', function () {
     return gulp.src("scss/*.scss")
         .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
