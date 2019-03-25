@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>1sft</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="TopNav">
+        <h3>ONE SQUARE FOOT</h3>
+        <a href="#signin">Sign in</a>
+    </header>
+
+    <section class="Hero">
+        <div class="Hero-text">
+            <h1 class="Hero-title">Imagine what you'll accomplish together</h1>
+            <h3 class="Hero-subtitle"><span>ONE SQUARE FOOT</span> is a real-estate property crowfunding platform - without the brokarage fee.</h3>
+            <button class="Hero-btn">Start a project <span>→</span></button>
+        </div>
+        <img class="Hero-img" src="img/hero2.svg" alt="hero">
+    </section>
+
+    <section class="Properties">
+        <div class="Filter">
+            <div class="Filter-item Filter-item--active" onclick="propertyType(event, 'Residential')">Residential</div>
+            <div class="Filter-item" onclick="propertyType(event, 'Commercial')">Commercial</div>
+            <div class="Filter-item" onclick="propertyType(event, 'Industrial')">Industrial</div>
+        </div>
+
+        <div id="Residential" class="Filter-content Filter-content--first">
+            <div class="Cards">
+                <a class="Card" href="/property.html">
+                    <img class="Card-img" src="https://vignette.wikia.nocookie.net/wikis-are-for-nerds/images/b/bc/House.jpg" alt="">
+                    <span class="Card-title">Stabilized Apartments</span>
+                    <span class="Card-subtitle">Fort Myers, FL • Income eREIT II</span>
+                    <div class="Card-info">
+                        <div class="Card-infoItem">
+                            <div class="Card-infoItemHeading">Risk Rating</div>
+                            <div class="Card-infoItemBody">B3</div>
+                        </div>
+                        <div class="Card-infoItem">
+                            <div class="Card-infoItemHeading">Percent Funded</div>
+                            <div class="Card-infoItemBody">62%</div>
+                        </div>
+                        <div class="Card-infoItem">
+                            <div class="Card-infoItemHeading">Projected Return</div>
+                            <div class="Card-infoItemBody">9.9%</div>
+                        </div>
+                    </div>
+                </a>
+
+                <a class="Card" href="/property.html">
+                    <img class="Card-img" src="https://odis.homeaway.com/odis/listing/ebd3faee-7ff2-416e-a742-000c427afeb7.c10.jpg" alt="">
+                    <span class="Card-title">Stabilized Apartments</span>
+                    <span class="Card-subtitle">Fort Myers, FL • Income eREIT II</span>
+                    <div class="Card-info">
+                        <div class="Card-infoItem">
+                            <div class="Card-infoItemHeading">Risk Rating</div>
+                            <div class="Card-infoItemBody">B3</div>
+                        </div>
+                        <div class="Card-infoItem">
+                            <div class="Card-infoItemHeading">Percent Funded</div>
+                            <div class="Card-infoItemBody">62%</div>
+                        </div>
+                        <div class="Card-infoItem">
+                            <div class="Card-infoItemHeading">Projected Return</div>
+                            <div class="Card-infoItemBody">9.9%</div>
+                        </div>
+                    </div>
+                </a>
+
+                <a class="Card" href="/property.html">
+                    <img class="Card-img" src="https://www.rentfast.ca/rfc/listing_photos/2/0/8/9/4309802.v.c9e8fa45c6cc30878280de71f4ada490.jpg" alt="">
+                    <span class="Card-title">Stabilized Apartments</span>
+                    <span class="Card-subtitle">Fort Myers, FL • Income eREIT II</span>
+                    <div class="Card-info">
+                        <div class="Card-infoItem">
+                            <div class="Card-infoItemHeading">Risk Rating</div>
+                            <div class="Card-infoItemBody">B3</div>
+                        </div>
+                        <div class="Card-infoItem">
+                            <div class="Card-infoItemHeading">Percent Funded</div>
+                            <div class="Card-infoItemBody">62%</div>
+                        </div>
+                        <div class="Card-infoItem">
+                            <div class="Card-infoItemHeading">Projected Return</div>
+                            <div class="Card-infoItemBody">9.9%</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+
+        <div id="Commercial" class="Filter-content">
+            <div class="Cards">
+                <a class="Card" href="/property.html">
+                    <img class="Card-img" src="https://odis.homeaway.com/odis/listing/ebd3faee-7ff2-416e-a742-000c427afeb7.c10.jpg" alt="">
+                    <span class="Card-title">Stabilized Apartments</span>
+                    <span class="Card-subtitle">Fort Myers, FL • Income eREIT II</span>
+                    <div class="Card-info">
+                        <div class="Card-infoItem">
+                            <div class="Card-infoItemHeading">Risk Rating</div>
+                            <div class="Card-infoItemBody">B3</div>
+                        </div>
+                        <div class="Card-infoItem">
+                            <div class="Card-infoItemHeading">Percent Funded</div>
+                            <div class="Card-infoItemBody">62%</div>
+                        </div>
+                        <div class="Card-infoItem">
+                            <div class="Card-infoItemHeading">Projected Return</div>
+                            <div class="Card-infoItemBody">9.9%</div>
+                        </div>
+                    </div>
+                </a>
+
+                <a class="Card" href="/property.html">
+                    <img class="Card-img" src="https://www.rentfast.ca/rfc/listing_photos/2/0/8/9/4309802.v.c9e8fa45c6cc30878280de71f4ada490.jpg" alt="">
+                    <span class="Card-title">Stabilized Apartments</span>
+                    <span class="Card-subtitle">Fort Myers, FL • Income eREIT II</span>
+                    <div class="Card-info">
+                        <div class="Card-infoItem">
+                            <div class="Card-infoItemHeading">Risk Rating</div>
+                            <div class="Card-infoItemBody">B3</div>
+                        </div>
+                        <div class="Card-infoItem">
+                            <div class="Card-infoItemHeading">Percent Funded</div>
+                            <div class="Card-infoItemBody">62%</div>
+                        </div>
+                        <div class="Card-infoItem">
+                            <div class="Card-infoItemHeading">Projected Return</div>
+                            <div class="Card-infoItemBody">9.9%</div>
+                        </div>
+                    </div>
+                </a>
+
+                <a class="Card" href="/property.html">
+                    <img class="Card-img" <img class="Card-img" src="https://vignette.wikia.nocookie.net/wikis-are-for-nerds/images/b/bc/House.jpg" alt="">
+                    <span class="Card-title">Stabilized Apartments</span>
+                    <span class="Card-subtitle">Fort Myers, FL • Income eREIT II</span>
+                    <div class="Card-info">
+                        <div class="Card-infoItem">
+                            <div class="Card-infoItemHeading">Risk Rating</div>
+                            <div class="Card-infoItemBody">B3</div>
+                        </div>
+                        <div class="Card-infoItem">
+                            <div class="Card-infoItemHeading">Percent Funded</div>
+                            <div class="Card-infoItemBody">62%</div>
+                        </div>
+                        <div class="Card-infoItem">
+                            <div class="Card-infoItemHeading">Projected Return</div>
+                            <div class="Card-infoItemBody">9.9%</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+
+        <div id="Industrial" class="Filter-content">
+            <div class="Cards">
+                <a class="Card" href="/property.html">
+                    <img class="Card-img" src="https://www.rentfast.ca/rfc/listing_photos/2/0/8/9/4309802.v.c9e8fa45c6cc30878280de71f4ada490.jpg" alt="">
+                    <span class="Card-title">Stabilized Apartments</span>
+                    <span class="Card-subtitle">Fort Myers, FL • Income eREIT II</span>
+                    <div class="Card-info">
+                        <div class="Card-infoItem">
+                            <div class="Card-infoItemHeading">Risk Rating</div>
+                            <div class="Card-infoItemBody">B3</div>
+                        </div>
+                        <div class="Card-infoItem">
+                            <div class="Card-infoItemHeading">Percent Funded</div>
+                            <div class="Card-infoItemBody">62%</div>
+                        </div>
+                        <div class="Card-infoItem">
+                            <div class="Card-infoItemHeading">Projected Return</div>
+                            <div class="Card-infoItemBody">9.9%</div>
+                        </div>
+                    </div>
+                </a>
+
+                <a class="Card" href="/property.html">
+                    <img class="Card-img" src="https://odis.homeaway.com/odis/listing/ebd3faee-7ff2-416e-a742-000c427afeb7.c10.jpg" alt="">
+                    <span class="Card-title">Stabilized Apartments</span>
+                    <span class="Card-subtitle">Fort Myers, FL • Income eREIT II</span>
+                    <div class="Card-info">
+                        <div class="Card-infoItem">
+                            <div class="Card-infoItemHeading">Risk Rating</div>
+                            <div class="Card-infoItemBody">B3</div>
+                        </div>
+                        <div class="Card-infoItem">
+                            <div class="Card-infoItemHeading">Percent Funded</div>
+                            <div class="Card-infoItemBody">62%</div>
+                        </div>
+                        <div class="Card-infoItem">
+                            <div class="Card-infoItemHeading">Projected Return</div>
+                            <div class="Card-infoItemBody">9.9%</div>
+                        </div>
+                    </div>
+                </a>
+
+                <a class="Card" href="/property.html">
+                    <img class="Card-img" src="https://vignette.wikia.nocookie.net/wikis-are-for-nerds/images/b/bc/House.jpg" alt="">
+                    <span class="Card-title">Stabilized Apartments</span>
+                    <span class="Card-subtitle">Fort Myers, FL • Income eREIT II</span>
+                    <div class="Card-info">
+                        <div class="Card-infoItem">
+                            <div class="Card-infoItemHeading">Risk Rating</div>
+                            <div class="Card-infoItemBody">B3</div>
+                        </div>
+                        <div class="Card-infoItem">
+                            <div class="Card-infoItemHeading">Percent Funded</div>
+                            <div class="Card-infoItemBody">62%</div>
+                        </div>
+                        <div class="Card-infoItem">
+                            <div class="Card-infoItemHeading">Projected Return</div>
+                            <div class="Card-infoItemBody">9.9%</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="js/index.js"></script>
+</body>
+</html>

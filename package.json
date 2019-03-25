@@ -1,0 +1,13 @@
+{
+  "name": "1sft",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/kvzivn/1sft.git",
+  "author": "kvzivn <hello@kevinivan.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp": "3.9.1",
+    "gulp-sass": "^4.0.2"
+  }
+}

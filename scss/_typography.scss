@@ -1,0 +1,31 @@
+@font-face {
+    font-family: 'CarreNoir';
+    src: url('/fonts/CarreNoirStd-Medium.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Proxima Nova';
+    font-weight: 400;
+    src: url('/fonts/ProximaNova-Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Proxima Nova';
+    font-weight: 600;
+    src: url('/fonts/ProximaNova-Semibold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Proxima Nova';
+    font-weight: 700;
+    src: url('/fonts/ProximaNova-Bold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Proxima Nova';
+    font-weight: 800;
+    src: url('/fonts/ProximaNova-Extrabold.otf') format('opentype');
+}
+
+$serif: 'CarreNoir', Georgia, serif;
+$sans-serif: 'Proxima Nova', Helvetica, sans-serif;
