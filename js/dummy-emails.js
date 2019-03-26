@@ -1,21 +1,21 @@
 var emails = [
 	{
-		"from": "Maxime Preaux",
-		"address": "maxime@codepen.io",
+		"from": "Saamer Mansoor",
+		"address": "i@codepen.io",
 		"time": "2016-10-07 15:35:14",
-		"message": "This is my first attempt at using React.\nDuis cursus, diam at pretium aliquet, metus urna convallis erat, eget tincidunt dui augue eu tellus. Phasellus elit pede, malesuada vel, venenatis vel, faucibus id, libero. Donec consectetuer mauris id sapien. Cras",
-		"subject": "Messing with React.js",
+		"message": "I live in Toronto, ON. I reviewed the financials, the required documents and the documents that you will provide. I would like to purchase 10 shares of the Single-family rental home for a total of $10,000. I look forward to hearing back from you",
+		"subject": "Single-family rental home",
 		"tag": "inbox",
 		"read": "false"
 	},
 	{
-		"from": "Dribbble",
-		"address": "digest@dribbble.com",
+		"from": "Barack Obama",
+		"address": "barack@obama.com",
 		"time": "2016-05-09 14:23:54",
-		"message": "Here are the latest shots from Dribbblers you follow! Nec mauris blandit mattis. Cras eget nisi dictum augue malesuada malesuada. Integer id magna et ipsum cursus vestibulum. Mauris magna. Duis dignissim tempor arcu. Vestibulum ut eros non enim commodo hendrerit. Donec porttitor tellus non magna. Nam ligula elit, pretium et, rutrum non, hendrerit id, ante. Nunc mauris sapien,",
-		"subject": "Dribbble Digest",
+		"message": "I heard about your awesome website, and I'm excited to purchase some shares. Please accept my request for 200 shares in exchange for 125,000",
+		"subject": "Luxury Home-Big Family",
 		"tag": "inbox",
-		"read": "false"
+		"read": "true"
 	},
 	{
 		"from": "Christopher Medina",
