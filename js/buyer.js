@@ -192,7 +192,8 @@ const EmailDetails = ({ email, onDelete }) => {
                 React.createElement("button", { className: "button button--inbox button--secondary" }, 'Cancel Transaction'),
                 React.createElement("div", { className: "email-content__time" }, date),
                 React.createElement("div", { className: "email-content__from" }, email.from)),
-                React.createElement("div", { className: "email-content__message" }, email.message)))
+                React.createElement("div", { className: "email-content__message" }, email.message),
+            React.createElement("div", { className: "email-content__message sellerMessage" }, 'Saamer has accepted your proposal. Kevin, please verify and accept the documents provided to complete the transaction.')))
 };
 
 /* EmailList contains a list of Email components */

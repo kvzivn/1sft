@@ -35,9 +35,9 @@
                     </h2>
                     <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
                 </header>
-                <main class="modal__content" id="modal-1-content">
-                    <p style="margin: 40px 0">Please provide the following documents:<br> <b>Power of Attorney</b> & <b>Title
-                            Lean document</b></p>
+                <main class="modal__content js-modal" id="modal-1-content">
+                    <p style="margin: 30px 0 20px;">Please provide the following signed documents:</p>
+                    <p class="fat">Power of Attorney & Title Lean document</p>
                     <div class="uploadWrapper">
                         <input type="file" multiple="multiple" id="fupTemplates" name="fupTemplates" class="fileUpload" style="display: none;">
                         <label for="fupTemplates" class="lblFileElem">Click here to select some files for Uploading</label>
@@ -45,7 +45,7 @@
                     </div>
                 </main>
                 <footer class="modal__footer">
-                    <button class="button" data-micromodal-close aria-label="Close this dialog window">Continue</button>
+                    <button class="button js-submit">Submit</button>
                     <button class="button button--secondary">Close</button>
                 </footer>
             </div>
@@ -55,8 +55,34 @@
     <script src='http://cdnjs.cloudflare.com/ajax/libs/react/0.14.3/react.min.js'></script>
     <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://labs.nearpod.com/bodymovin/demo/promo/lottie2.min.js"></script>
     <script src="js/buyer-emails.js"></script>
     <script src="js/buyer.js"></script>
+
+    <script>
+        const modalContent = document.querySelector('.js-modal')
+        const submitBtn = document.querySelector('.js-submit')
+
+        var animItem = bodymovin.loadAnimation({
+            wrapper: svgContainer,
+            animType: 'svg',
+            loop: false,
+            autoplay: true,
+            path: 'https://gist.githubusercontent.com/saamerm/520b630b9cef5c8708b448563804d0e3/raw/ced05f3313c470cca73eadf7cced5b2adc0b81ca/successAnimation.json'
+        });
+
+        submitBtn.addEventListener('click', () => {
+            modalContent.innerHTML = `<div id="svgContainer"></div>`
+            var svgContainer = document.getElementById('svgContainer');
+
+            animItem.play();
+
+            setTimeout(() => {
+                animItem.pause();
+            }, 3000)
+        })
+
+    </script>
 
     <script>
         const modalBtn = document.querySelector('.js-modalBtn')
