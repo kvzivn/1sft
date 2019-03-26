@@ -480,3 +480,10 @@ input[type=checkbox] {
 .fat {
     font-weight: bold;
 }
+
+.uploadWrapper {
+    margin-top: 30px;
+    border: 3px dashed $color-green;
+    padding: 15px;
+    border-radius: 10px;
+}

@@ -11,6 +11,7 @@
     "browser-sync": "^2.26.3",
     "gulp": "3.9.1",
     "gulp-babel": "^8.0.0",
-    "gulp-sass": "^4.0.2"
+    "gulp-sass": "^4.0.2",
+    "micromodal": "^0.3.2"
   }
 }

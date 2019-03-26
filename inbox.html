@@ -26,9 +26,182 @@
         </div>
     </main>
 
+    <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+            <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+                <header class="modal__header">
+                    <h2 id="modal-1-title">
+                        Accept Proposal
+                    </h2>
+                    <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+                </header>
+                <main class="modal__content" id="modal-1-content">
+                    <p>Please provide the following documents:</p>
+                    <p class="fat">Power of Attorney & Title Lean document</p>
+                    <div class="uploadWrapper">
+                        <input type="file" multiple="multiple" id="fupTemplates" name="fupTemplates" class="fileUpload" style="display: none;">
+                        <label for="fupTemplates" class="lblFileElem">Click here to select some files for Uploading</label>
+                        <div id="filesAvailable"></div>
+                    </div>
+                </main>
+                <footer class="modal__footer">
+                    <button class="button" data-micromodal-close aria-label="Close this dialog window">Continue</button>
+                    <button class="button button--secondary">Close</button>
+                </footer>
+            </div>
+        </div>
+    </div>
+
     <script src='http://cdnjs.cloudflare.com/ajax/libs/react/0.14.3/react.min.js'></script>
+    <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/dummy-emails.js"></script>
     <script src="js/inbox.js"></script>
+
+
+    <script>
+        const modalBtn = document.querySelector('.js-modalBtn')
+
+        MicroModal.init();
+
+        modalBtn.addEventListener('click', () => {
+            MicroModal.show('modal-1');
+        })
+    </script>
+
+    <script>
+    let $form = $('.uploadWrapper'); // false form, div wrapper
+        let lblFileElem = document.querySelector('.lblFileElem'); // file label
+        let filesAvailable = document.getElementById('filesAvailable');
+        let fileInput = document.querySelector('.fileUpload');
+
+        var isAdvancedUpload = function () {
+            var div = document.createElement('div');
+            return (('draggable' in div) || ('ondragstart' in div && 'ondrop' in div)) && 'FormData' in window && 'FileReader' in window;
+        }();
+        /* reset */
+        $(document).ready(function () {
+            if (isAdvancedUpload) {
+                $('.loadingDiv').addClass('has-advanced-upload'); // to rearrange CSS
+                $('.lblFileElem').text('Click here to select some files for Uploading'); // alternate labelling
+
+                $form
+                    .on('drag dragstart dragend dragover dragenter dragleave', function (e) {
+                        if (detectIE() != false) { // is ie
+                            $('.uploadWrapper').addClass('error');
+                            $('.lblFileElem').text('Internet Explorer does not support this functionality. Please consider upgrading your browser.'); // alternate labelling
+                        } else { // not ie
+                            e.preventDefault();
+                            e.stopPropagation();
+                        }
+                    })
+                    .on('dragover dragenter', function () {
+                        $('.uploadWrapper').addClass('highlight');
+
+                    })
+                    .on('dragleave dragend', function () {
+                        $('.uploadWrapper').removeClass('highlight');
+                        $('.uploadWrapper').removeClass('error');
+                        $('.lblFileElem').text('Click here to select some files for Uploading'); // alternate labelling
+                    })
+                    .on('drop', function (e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        $('.uploadWrapper').removeClass('highlight');
+                        $('.uploadWrapper').removeClass('error');
+                        $('.lblFileElem').text('Click here to select some files for Uploading'); // alternate labelling
+                        droppedFiles = e.originalEvent.dataTransfer.files; // the files that were dropped
+                        fileInput.files = null;
+                        fileInput.files = droppedFiles;
+                        populateUploadList(droppedFiles);
+                    });
+            }
+        });
+
+        $(fileInput).on('change', function () {
+            populateUploadList(fileInput.files);
+        });
+
+        function populateUploadList(f) {
+            filesAvailable.innerHTML = "";
+            $('#filesAvailable').show();
+            for (i = 0; i < f.length; i++) {
+                filesAvailable.innerHTML += "<div class='fileWrapper'><span>" + filesImageType(f[i].name.split('.').pop()) + "</span><span>" + f[i].name + "</span><span style='margin-left: 8px'>" + findFileSize(f[i].size) + "</span></div>";
+            }
+            $('.lblFileElem').text(f.length + ' files selected.'); // alternate labelling
+        }
+
+        function filesImageType(ext) {
+            var imgurl;
+            switch (ext) {
+                case undefined:
+                    imgurl = 'images/doc_alert.png'
+                    break;
+                case "default":
+                case "doc":
+                case "docx":
+                case "docm":
+                case "dotm":
+                case "dotx":
+                    imgurl = 'images/doc.png'
+                    break;
+                case "xls":
+                case "xlsx":
+                case "xlsm":
+                case "xltx":
+                case "xltm":
+                    imgurl = 'images/xls-coloured.png'
+                    break;
+                case "ppt":
+                case "pptx":
+                case "pptm":
+                    imgurl = 'images/ppt-coloured.png'
+                    break;
+                case "pdf":
+                    imgurl = 'images/pdf-coloured.png'
+                    break;
+                case "msg":
+                    imgurl = 'images/msg-coloured.png'
+                    break;
+            }
+            return `<span style="margin-right: 4px;" class="fa fa-file"></span>`;
+        }
+        function findFileSize(number) {
+            if (number < 1024) {
+                return number + 'bytes';
+            } else if (number >= 1024 && number < 1048576) {
+                return (number / 1024).toFixed(1) + 'KB';
+            } else if (number >= 1048576) {
+                return (number / 1048576).toFixed(1) + 'MB';
+            }
+        }
+        function logCurrent() {
+            var file = document.forms['form1']['fupTemplates'].files;
+            console.log(file);
+        }
+
+        function detectIE() {
+            var ua = window.navigator.userAgent;
+            var msie = ua.indexOf('MSIE ');
+            if (msie > 0) {
+                // IE 10 or older => return version number
+                return parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
+            }
+            var trident = ua.indexOf('Trident/');
+            if (trident > 0) {
+                // IE 11 => return version number
+                var rv = ua.indexOf('rv:');
+                return parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
+            }
+            var edge = ua.indexOf('Edge/');
+            if (edge > 0) {
+                // Edge (IE 12+) => return version number
+                return parseInt(ua.substring(edge + 5, ua.indexOf('.', edge)), 10);
+            }
+            // other browser
+            return false;
+        }
+    </script>
 </body>
 
 </html>

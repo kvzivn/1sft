@@ -92,9 +92,6 @@ class App extends React.Component {
       React.createElement(EmailDetails, {
         email: currentEmail,
         onDelete: id => {this.deleteMessage(id);} }))));
-
-
-
   }}
 
 
@@ -170,7 +167,6 @@ const EmailDetails = ({ email, onDelete }) => {
   if (!email) {
     return (
       React.createElement("div", { className: "email-content empty" }));
-
   }
 
   const date = `${getPrettyDate(email.time)} · ${getPrettyTime(email.time)}`;
@@ -186,13 +182,11 @@ const EmailDetails = ({ email, onDelete }) => {
     React.createElement("div", { className: "email-content" },
     React.createElement("div", { className: "email-content__header" },
     React.createElement("h3", { className: "email-content__subject" }, email.subject),
-    getDeleteButton(),
+    React.createElement("button", { className: "button button--inbox js-modalBtn" }, 'Accept proposal'),
+    React.createElement("button", { className: "button button--inbox button--secondary" }, 'Reject proposal'),
     React.createElement("div", { className: "email-content__time" }, date),
     React.createElement("div", { className: "email-content__from" }, email.from)),
-
-    React.createElement("div", { className: "email-content__message" }, email.message)));
-
-
+    React.createElement("div", { className: "email-content__message" }, email.message)))
 };
 
 /* EmailList contains a list of Email components */
@@ -200,9 +194,6 @@ const EmailList = ({ emails, onEmailSelected, selectedEmailId }) => {
   if (emails.length === 0) {
     return (
       React.createElement("div", { className: "email-list empty" }, "Nothing to see here, great job!"));
-
-
-
   }
 
   return (
@@ -216,8 +207,6 @@ const EmailList = ({ emails, onEmailSelected, selectedEmailId }) => {
           selected: selectedEmailId === email.id }));
 
     })));
-
-
 
 };
 

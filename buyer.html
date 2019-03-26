@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>1sft</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'>
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -13,129 +15,57 @@
 <body>
     <header class="TopNav">
         <nav class="TopNav-nav" role="navigation">
-            <h3>ONE SQUARE FOOT</h3>
+            <a class="TopNav-logo" href="/"><h3>ONE SQUARE FOOT</h3></a>
             <a class="TopNav-login" href="/login.html">Sign in →</a>
         </nav>
     </header>
 
-    <div class="Wrapper">
-        <section class="Property">
-            <header class="Property-header">
-                <div class="Property-headerInfo">
-                    <h1 class="Property-title">Single-family home rental</h1>
-                    <h2 class="Property-subtitle">South Halifax, Halifax, NS</h2>
-                </div>
-                <div class="Property-profile">
-                    <span class="Property-profileInfo">By Transglobal<br>Properties</span>
-                </div>
-            </header>
-
-            <main class="Property-body">
-                <img class="Property-img" src="/img/house1.png" alt="">
-                <div class="Property-info">
-                    <div class="Property-progressBar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
-                        <div class="Property-progress"></div>
-                    </div>
-                    <div class="Property-infoItem">
-                        <div class="Property-infoItemTitle Property-infoItemTitle--green">CA$ 23,256</div>
-                        <div class="Property-infoItemSubtitle">Pledged of CA$ 156,500</div>
-                    </div>
-
-                    <div class="Property-infoItem">
-                        <div class="Property-infoItemTitle">560</div>
-                        <div class="Property-infoItemSubtitle">Backers</div>
-                    </div>
-
-                    <div class="Property-infoItem">
-                        <div class="Property-infoItemTitle">23</div>
-                        <div class="Property-infoItemSubtitle">Days to go</div>
-                    </div>
-
-                    <button class="Property-btn" data-micromodal-trigger="modal-1">Back this project</button>
-                </div>
-            </main>
-        </section>
-
-        <section>
-            <div class="Filter Filter--property">
-                <div class="Filter-item Filter-item--active">Summary</div>
-                <div class="Filter-item">Sponsor</div>
-                <div class="Filter-item">Dilligence Report</div>
-                <div class="Filter-item">Finicials</div>
-                <div class="Filter-item">Location</div>
-                <div class="Filter-item">FAQs</div>
-            </div>
-            <h3>About this property</h3>
-            <p class="Property-aboutText">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime animi et sunt nihil cum? Cupiditate error, dolorem facere
-                perspiciatis molestiae maxime enim illo consequatur ipsum culpa ipsam porro tempore odio. Quis, nesciunt quos modi
-                ipsa quasi blanditiis ea in non dignissimos consectetur eius magni nemo, quam odio ab quibusdam ad nihil voluptatibus
-                culpa minima mollitia! Asperiores, odit animi officia eum quidem sequi impedit corporis suscipit ipsa at illo soluta,
-                ab sit aspernatur aliquid distinctio nulla nemo excepturi quos odio quisquam vitae dolorum eius qui? Corporis, quasi
-                sapiente natus distinctio modi libero ab hic eaque dolor? Quae possimus odio a obcaecati.
-            </p>
-            <h3>Key points</h3>
-            <ul>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, saepe.</li>
-                <li>Nostrum nulla, modi provident est explicabo quasi dicta praesentium inventore.</li>
-                <li>Officia, facilis ipsa. Voluptates consequuntur iure totam.</li>
-            </ul>
-        </section>
-
-        <section class="Property-chart">
-            <img class="Property-chartImg" src="/img/chart.png" alt="">
-        </section>
-    </div>
+    <main>
+        <div class="inbox-wrapper">
+            <div id="inbox"></div>
+        </div>
+    </main>
 
     <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
         <div class="modal__overlay" tabindex="-1" data-micromodal-close>
             <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
                 <header class="modal__header">
-                    <h2 id="modal-1-title" class="modalTitle">
-                        How many shares would you like to bid for this project?
+                    <h2 id="modal-1-title">
+                        Accept Proposal
                     </h2>
                     <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
                 </header>
                 <main class="modal__content" id="modal-1-content">
-                    <div class="Bid-row">
-                        <span>Shares</span><input type="text" value="10">
-                    </div>
-                    <div class="Bid-row">
-                        <span>Escrow fees</span><span>$300</span>
-                    </div>
-                    <div class="Bid-row">
-                        <span>You'll pay</span><span>$10,000</span>
-                    </div>
-                    <label class="Bid-label" for="yes">Pay with Credit Card</label>
-                    <select class="Bid-select" name="yes" id="yes">
-                        <option value="********2343">********2343</option>
-                    </select>
-                    <div class="Big-upload">
-                        <p style="margin: 30px 0 20px">Please provide the following documents:</p>
-                        <p class="fat">
-                            Canadian Passport / Permanent Resident Card<br> Driver's License
-                        </p>
-                        <div class="uploadWrapper">
-                            <input type="file" multiple="multiple" id="fupTemplates" name="fupTemplates" class="fileUpload" style="display: none;">
-                            <label for="fupTemplates" class="lblFileElem">Click here to select some files for Uploading</label>
-                            <div id="filesAvailable"></div>
-                        </div>
+                    <p style="margin: 40px 0">Please provide the following documents:<br> <b>Power of Attorney</b> & <b>Title
+                            Lean document</b></p>
+                    <div class="uploadWrapper">
+                        <input type="file" multiple="multiple" id="fupTemplates" name="fupTemplates" class="fileUpload" style="display: none;">
+                        <label for="fupTemplates" class="lblFileElem">Click here to select some files for Uploading</label>
+                        <div id="filesAvailable"></div>
                     </div>
                 </main>
-                <footer class="modal__footer" style="text-align: center;">
+                <footer class="modal__footer">
+                    <button class="button" data-micromodal-close aria-label="Close this dialog window">Continue</button>
                     <button class="button button--secondary">Close</button>
-                    <button class="button" data-micromodal-close aria-label="Close this dialog window">Place bid</button>
                 </footer>
             </div>
         </div>
     </div>
 
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/react/0.14.3/react.min.js'></script>
     <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="js/index.js"></script>
+    <script src="js/buyer-emails.js"></script>
+    <script src="js/buyer.js"></script>
 
     <script>
+        const modalBtn = document.querySelector('.js-modalBtn')
+
         MicroModal.init();
+
+        modalBtn.addEventListener('click', () => {
+            MicroModal.show('modal-1');
+        })
     </script>
 
     <script>
