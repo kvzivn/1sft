@@ -191,6 +191,7 @@ $sidebar-width: 200px;
 	}
 
 	&__subject {
+		display: inline-block;
 		font-size: 18px;
 		margin: 10px 0;
 	}
@@ -203,7 +204,6 @@ $sidebar-width: 200px;
 
 	&__time {
 		color: #878787;
-		float: right;
 	}
 
 	&__from {

@@ -1,0 +1,72 @@
+.loadingDivOuter {
+  position: fixed; top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  display: flex; justify-content: center;
+  align-items: center;
+  background: rgba(0,0,0,0.3);
+}
+.loadingDiv {
+  background: #fff; border-radius: 15px;
+  padding: 40px 20px; width: 900px;
+  position: relative;
+  box-shadow: 0 11px 15px -7px rgba(0,0,0,.2), 0 8px 10px 3px rgba(0,0,0,.14), 0 9px 46px 8px rgba(0,0,0,.12);
+  max-height: calc(100% - 120px);
+}
+.ViewLink {
+  margin: 10px; display: inline-block; background: #ccc;
+  padding: 10px 20px; border-radius: 6px;
+}
+.ViewLink:hover { background: red; }
+.HeaderLabel {
+  display: block; font-size: 18px; color: #2854a5;
+  font-weight: bold; text-transform: uppercase;
+}
+.FieldLabel {
+  display: block;
+}
+
+.has-advanced-upload .uploadDocsControls { position: relative; z-index: 9; }
+.has-advanced-upload .fileUpload {
+  cursor: pointer;
+  border-radius: 15px;
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  opacity: 0;
+  user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+}
+
+.has-advanced-upload .uploadWrapper {
+  position: relative;
+  display: inline-block;
+  padding: 20px;
+  margin: 20px;
+  cursor: pointer;
+  border-radius: 15px;
+  border: 3px dashed #ddd;
+  width: calc(100% - 86px);
+}
+.has-advanced-upload .uploadWrapper:hover { border-color: #bbb; }
+
+.has-advanced-upload .uploadWrapper.highlight { border-color: lime; }
+.has-advanced-upload .uploadWrapper.error { border-color: red; }
+
+.has-advanced-upload #filesAvailable {
+  margin-top: 20px;
+  padding: 10px;
+  display: none;
+  overflow-y: scroll;
+  height: auto;
+  max-height: calc(100% - 50px);
+}
+.has-advanced-upload .fileWrapper {
+  width: 100%;
+  display: flex;
+  text-align: left;
+}
+.has-advanced-upload .fileWrapper span { padding: 5px;}
+.has-advanced-upload .fileWrapper span:nth-child(2) { flex-grow: 1; }
