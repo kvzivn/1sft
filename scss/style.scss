@@ -100,6 +100,7 @@ ul > li {
     max-width: 920px;
     height: 60px;
     margin: 0 auto;
+    padding-top: 2px;
 
     &--login {
         justify-content: center;
@@ -186,6 +187,14 @@ ul > li {
 
     &--active {
         border-bottom: 3px solid $color-green;
+    }
+
+    .Filter--property & {
+        font-size: 12px;
+
+        &--active {
+            border-bottom: 2px solid $color-green;
+        }
     }
 }
 
@@ -595,4 +604,17 @@ td a {
     font-size: 32px;
     text-align: center;
     margin: 0 0 30px;
+}
+
+.alert {
+    background: $color-green;
+    color: white;
+    font-size: 22px;
+    font-weight: 600;
+    padding: 16px 0 12px;
+    max-width: 500px;
+    border-radius: 15px;
+    margin: 60px auto;
+    text-align: center;
+    display: none;
 }

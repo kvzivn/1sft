@@ -28,8 +28,8 @@
 
     <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
         <div class="modal__overlay" tabindex="-1" data-micromodal-close>
-            <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
-                <header class="modal__header">
+            <div class="modal__container js-modal" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+                <header class="modal__header js-header">
                     <h2 id="modal-1-title">
                         Accept Proposal
                     </h2>
@@ -45,7 +45,7 @@
                     </div>
                 </main>
                 <footer class="modal__footer">
-                    <button class="button" data-micromodal-close aria-label="Close this dialog window">Continue</button>
+                    <button class="button js-submit">Continue</button>
                     <button class="button button--secondary">Close</button>
                 </footer>
             </div>
@@ -55,9 +55,43 @@
     <script src='http://cdnjs.cloudflare.com/ajax/libs/react/0.14.3/react.min.js'></script>
     <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://labs.nearpod.com/bodymovin/demo/promo/lottie2.min.js"></script>
     <script src="js/dummy-emails.js"></script>
     <script src="js/inbox.js"></script>
 
+        <script>
+            const modalContent = document.querySelector('.js-modal')
+            const submitBtn = document.querySelector('.js-submit')
+            const header = document.querySelector('.js-header')
+
+            submitBtn.addEventListener('click', () => {
+                header.style.display = 'none'
+
+                modalContent.innerHTML = `
+                        <div class="gratz">
+                            <h2 class="gratz-heading">Well done!</h2>
+                            <div id="svgContainer"></div>
+                            <button class="button" data-micromodal-close aria-label="Close this dialog window">Close</button>
+                        </div>
+                    `
+
+                runLottie();
+            })
+
+            function runLottie() {
+                var svgContainer = document.getElementById('svgContainer');
+
+                var animItem = bodymovin.loadAnimation({
+                    wrapper: svgContainer,
+                    animType: 'svg',
+                    loop: true,
+                    autoplay: true,
+                    path: 'https://gist.githubusercontent.com/saamerm/db5d7ab93da2b080cf099c183f90aef1/raw/b20f297a30ec004d84816b5f047094b48727a8d2/ThumbsUpLottieAnimation.json'
+                });
+
+                animItem.play();
+            }
+        </script>
 
     <script>
         const modalBtn = document.querySelector('.js-modalBtn')

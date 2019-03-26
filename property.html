@@ -22,6 +22,7 @@
     </header>
 
     <div class="Wrapper">
+        <div class="alert">You have successfully placed your bid.</div>
         <section class="Property">
             <header class="Property-header">
                 <div class="Property-headerInfo">
@@ -127,7 +128,7 @@
                 </main>
                 <footer class="modal__footer" style="text-align: center;">
                     <button class="button button--secondary">Close</button>
-                    <button class="button" data-micromodal-close aria-label="Close this dialog window">Place bid</button>
+                    <button class="button js-placeBid" data-micromodal-close aria-label="Close this dialog window">Place bid</button>
                 </footer>
             </div>
         </div>
@@ -136,6 +137,18 @@
     <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/index.js"></script>
+
+    <script>
+        const bidBtn = document.querySelector('.js-placeBid')
+        const alert = document.querySelector('.alert')
+
+        bidBtn.addEventListener('click', () => {
+            alert.style.display = 'block';
+            setTimeout(() => {
+                window.scrollTo(0, 0);
+            }, 1)
+        })
+    </script>
 
     <script>
         MicroModal.init();

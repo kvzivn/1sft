@@ -63,7 +63,6 @@
         const modalContent = document.querySelector('.js-modal')
         const submitBtn = document.querySelector('.js-submit')
 
-
         submitBtn.addEventListener('click', () => {
             modalContent.innerHTML = `
                 <div class="gratz">
@@ -89,9 +88,11 @@
 
             animItem.play();
 
-            setTimeout(() => {
-                animItem.pause();
-            }, 3200)
+            animItem.addEventListener("enterFrame", (animation) => {
+                if (animation.currentTime > (animItem.totalFrames - 1)) {
+                    animItem.pause();
+                }
+            });
         }
     </script>
 
