@@ -22,7 +22,7 @@ var emails = [
 		"address": "dolor@luctusutpellentesque.net",
 		"time": "2015-07-03 21:48:27",
 		"message": "Woops, that last pull request messed up the csproj. Mauris. Morbi non sapien molestie orci tincidunt adipiscing. Mauris molestie pharetra",
-		"subject": "Broken PR?",
+		"subject": "Luxury Home-Big Family",
 		"tag": "inbox",
 		"read": "false"
 	},
@@ -31,16 +31,16 @@ var emails = [
 		"address": "mi@utnisi.edu",
 		"time": "2016-01-08 18:39:34",
 		"message": "Every wish you could read all this Lorem Ipsum stuff? Subornareornare lectus justo eu arcu. Morbi sit amet massa. Quisque porttitor eros nec tellus. Nunc lectus pede, ultrices",
-		"subject": "Learn latin in 10 days!",
+		"subject": "Single-family rental home",
 		"tag": "deleted",
 		"read": "true"
 	},
 	{
-		"from": "Slack HQ",
+		"from": "Slack Joe",
 		"address": "fishbowl@slack.com",
 		"time": "2015-07-21 09:47:57",
 		"message": "Click here to consectetuer rhoncus. Nullam velit dui, semper et, lacinia vitae, sodales at, velit. Pellentesque ultricies dignissim lacus. Aliquam rutrum lorem ac risus. Morbi",
-		"subject": "Join the Fishbowl Team",
+		"subject": "Single-family rental home",
 		"tag": "inbox",
 		"read": "true"
 	},
@@ -49,21 +49,21 @@ var emails = [
 		"address": "ut.erat.Sed@volutpatNulla.co.uk",
 		"time": "2016-01-08 10:14:40",
 		"message": "Trepalium is going on tour! Duis cursus, diam at pretium aliquet, metus urna convallis erat, eget tincidunt dui augue eu tellus. Phasellus elit pede, malesuada vel, venenatis vel, faucibus id, libero. Donec consectetuer mauris",
-		"subject": "Concert tickets on sale",
+		"subject": "Single-family rental home",
 		"tag": "inbox",
 		"read": "false"
 	},
 	{
-		"from": "StackOverflow",
+		"from": "Stacy Flow",
 		"address": "non@semmolestie.com",
 		"time": "2016-06-29 15:39:06",
 		"message": "You're almost done! Finish registering your account, and you'll be able to demand answers from random people that are smarter than you. Cum sociis natoque penatibus et magnis dis parturient",
-		"subject": "Verify your StackOverflow account",
+		"subject": "Luxury Home-Big Family",
 		"tag": "inbox",
 		"read": "true"
 	},
 	{
-		"from": "Pastebin.com",
+		"from": "Afreen Khan",
 		"address": "Phasellus.dapibus.quam@vitaenibh.org",
 		"time": "2016-03-14 09:43:27",
 		"message": "Buy a cheap lifetime subscrition today! Or we'll remind you every two weeks until you die. Quis massa. Mauris vestibulum, neque sed dictum eleifend, nunc risus varius orci, in consequat enim diam vel arcu. Curabitur ut odio vel est tempor bibendum. Donec felis orci, adipiscing non, luctus sit amet, faucibus ut, nulla.",
@@ -81,11 +81,11 @@ var emails = [
 		"read": "true"
 	},
 	{
-		"from": "Codepen Info",
+		"from": "One Square Foot Arif",
 		"address": "pharetra.Nam@lacus.com",
 		"time": "2016-07-05 18:20:04",
 		"message": "Great job! Having a terrible sleep schedule is paying off! Cursus in, hendrerit consectetuer, cursus et, magna. Praesent interdum ligula eu enim. Etiam imperdiet dictum magna. Ut tincidunt orci quis lectus. Nullam suscipit, est ac",
-		"subject": "Your pen reached 1,000 views!",
+		"subject": "Your properties have reached 1 million views!",
 		"tag": "inbox",
 		"read": "true"
 	},
